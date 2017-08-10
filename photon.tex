@@ -29,16 +29,16 @@
 
 \begin{abstract}
 Popular science writing about quantum mechanics leaves many people full of questions about the status of photons.
-Unfortunately, complete answers to many of these questions require detailed calculations using techniques from quantum field theory.
-Nonetheless, there are still many questions that can be answered without tricky mathematics.
+I want to answer some of these without using any tricky mathematics.
 
 One of the challenges is that photons are very different to ordinary everyday objects like billiard balls.
 This is partly because photons are described by quantum mechanics whereas billiard balls are better modelled with classical Newtonian mechanics.
 Quantum mechanics defies many of our intuitions.
 But it's also because the word {\em photon} plays by different linguistic rules to {\em billiard ball}.
-I hope to explain why in a way that uses a minimum of mathematics, and introduce some interesting physics along the way.
+I hope to explain why in a way.
 
-One of my goals is to avoid saying anything original. I'm largely going to recapitulate, minus the mathematics, material I first learnt from three or so courses I took at Cambridge University many years ago: Quantum Mechanics, Solid State Physics and Quantum Field Theory.
+One of my goals is to avoid saying anything original.
+I'm largely going remove the mathematics from material I first learnt from three or so courses I took at Cambridge University many years ago: Quantum Mechanics, Solid State Physics and Quantum Field Theory.
 I also learnt about some of this from David Miller at Stanford University who talked a little about what properties it is meaningful to apply to a photon.
 (I hope I haven't misrepresented him too badly.)
 \end{abstract}
@@ -60,10 +60,9 @@ Here's a mass hanging on a spring:
 
 Suppose it's initially sitting in equilibrium so that the net force acting on it is zero.
 Now we lift the mass a small distance and let it go.
-Because we lifted it a bit, we shortened the spring, reducing the tension in the spring.
+Because we lifted it, we shortened the spring, reducing its tension.
 This means the force due to gravity is now more than the spring tension and the mass falls.
-Eventually it balls below the equilibrium point, increasing the tension in the spring so it's more than the force due to gravity.
-The result is a net force that pulls the mass back up again.
+Eventually it falls below the equilibrium point, increasing the tension in the spring so there is a net force pulling it back up again.
 To a good approximation, the force restoring the mass to its equilibrium point is proportional to how far it has been displaced.
 When this happens we end up with oscillating motion where the mass bounces up and down.
 Here's what a graph of its displacement looks like over time:
@@ -91,12 +90,12 @@ Here's what a graph of its displacement looks like over time:
 It's actually a sine wave but that detail doesn't matter for us right now.
 
 An oscillator where the restoring force is proportional to the displacement from the equilibrium point is called a {\em simple harmonic oscillator}\footnote{See \url{https://en.m.wikipedia.org/wiki/Simple_harmonic_motion}} and its oscillation is always described by a sine wave.
-I assume the sine wave is what gives it its name: this is the kind of oscillation you get from a musical instrument playing a pure note at one frequency.
 
 Note that I'm ignoring friction here. This is a reasonable approximation for many physical systems.
 
-Masses on springs aren't all that important in themselves. But many other physical systems also involve an oscillation about some equilibrium point with a restoring force proportional to the displacement.
-In fact, it's not completely unreasonable to say that almost all systems involving a single particle in some kind of force field result in simple harmonic motion when the displacements from equilibrium are small enough. Another standard example is the pendulum swinging under the influence of gravity:
+Masses on springs aren't all that important in themselves.
+But simple harmonic oscillators are very common.
+Another standard example is the pendulum swinging under the influence of gravity:
 
 \begin{center}
 \begin{tikzpicture}
