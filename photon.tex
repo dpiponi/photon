@@ -142,7 +142,7 @@ There is a lowest energy level, and then all of the energy levels above that are
 \draw[thick] (psii)--++(0:5cm) node[right]{third excited energy level};
 \draw[thick] (psif)--++(0:5cm) node[right]{second excited energy level};;
 \draw[thick] (psig)--++(0:5cm) node[right]{first excited energy level};;
-\draw[thick] (psih)--++(0:5cm) node[right]{lowest energy level};;
+\draw[thick] (psih)--++(0:5cm) node[right]{ground state};;
 
 \draw[<->] ([xshift=1cm]psig) -- ([xshift=1cm]psif) node[left, midway] (hwi) {one unit of energy};
 %\draw[<-] ([xshift=3cm]psif) -- ([xshift=3cm]dash) coordinate(aux);
@@ -159,12 +159,6 @@ The spacing of the energy levels depends on the {\em stiffness} of the system, w
 In practice the difference in energy between one level and the next is tiny. This means that if you're literally fiddling about with a mass on a spring you won't ever feel the discreteness. The amount your hand trembles is many orders of magnitude greater than the effect of this discreteness. Nonetheless, it is extremely important when modeling microscopic systems.
 
 \section{Quantum linguistics}
-Suppose you have two identical simple harmonic oscillators next near each each other.
-They each start at some energy level.
-Then let's say they interact in some way that I'm not going to specify.
-Now suppose the interaction is eventually switched off.
-They'll each end up at some energy level again.
-Because of energy conservation the total energy will be the same but one of the oscillators might end up at a higher energy level while the other ends up at a lower energy level.
 
 Here are some English sentences we could say about the kinds of systems I've described so far:
 
@@ -172,7 +166,7 @@ Here are some English sentences we could say about the kinds of systems I've des
 \item This system is in the ground state.
 \item That system is in its first excited state
 \item This system is at an energy level higher than that system
-\item During the interaction the energy level of this oscillator went down and the energy level of that one went up
+\item After allowing these two similar oscillators to interact, the energy level of this oscillator went down and the energy level of that one went up by the same amount.
 \end{enumerate}
 
 Now I want to introduce the (count) noun {\em quantum}\footnote{See \url{https://en.m.wikipedia.org/wiki/Quantum}}, with plural {\em quanta}.
@@ -209,40 +203,6 @@ Because of your experience with money I probably don't need to give you any more
 
 One more bit of terminology: when the spectrum of energies is discrete it's said to be {\em quantised}.
 
-\section{Real consequences}
-This discussion about whether or not quanta have their own individual identities sounds like philosophical nit-picking.
-But it has real physical consequences.
-
-In thermodynamics we usually assume that, in the absence of other knowledge, all of the possible states of a physical system are equally likely.
-For example, the behaviour of gases can be understood as a consequence of assuming that all arrangements of molecules in a container are equally likely, subject to things we might know about the gas like its total mass and energy.
-
-So let's think about what must be almost the simplest thermodynamic system possible: two quantum harmonic oscillators with the same frequency and where we know that there are two quanta shared between them.
-
-If the quanta are genuinely distinct entities there are four possibilities:
-\begin{enumerate}
-\item Both quanta are in the first oscillator.
-\item The first quantum is in the first oscillator and the second one is in the second oscillator.
-\item The first quantum is in the second oscillator and the second one is in the first oscillator.
-\item Both quanta are in the second oscillator.
-\end{enumerate}
-Half the time the quanta end up in the same oscillator.
-
-Now suppose the quanta aren't distinct entities but the complete state of a harmonic oscillator is given by its energy level.
-Then we have just three possibilities:
-\begin{enumerate}
-\item Both quanta are in the first oscillator.
-\item There is one quantum in each oscillator.
-\item Both quanta are in the second oscillator.
-\end{enumerate}
-Now both quanta end up in the same oscillator two out of three times.
-
-What happens in reality? The latter case.
-Indistinguishable quanta are more likely to hang out together than distinguishable ones.
-In fact, there is a name for quanta that do this: they're called {\em bosons}\footnote{See \url{https://en.m.wikipedia.org/wiki/Boson}}.
-An extreme example of this is the Bose-Einstein condensate\footnote{See \url{https://en.m.wikipedia.org/wiki/Bose-Einstein_condensate}} where it's possible to get a large number of bosons to enter the same state.
-This is observable in the lab.
-Boson statistics also determines the colour of the sun but I won't get as far as explaining that.\footnote{See \url{https://en.m.wikipedia.org/wiki/Planck's_law}}
-
 \section{Coupled systems}
 
 Let's return to classical physics with a slightly more complex system consisting of two masses connected to springs. We ignore gravity now:
@@ -271,36 +231,32 @@ This is a coupled system.
 If the left mass moves to the right, not only does it experience a restoring force pushing it left, but the mass on the right will experience more of a force pushing it to the left.
 We can't treat the masses as independent and so we don't get the simple solution of each mass always oscillating with a sine wave.
 
-For this particular problem though there is a trick to turn it into a pair of harmonic oscillators.
+For this particular problem though there's a trick to turn it into a pair of harmonic oscillators.
 The idea is to consider the pair of masses as a single entity.
-We can think of the centre of mass of the pair, the midpoint between them, as being one variable that describes this entity.
+We can think of the motion centre of mass of the pair, the midpoint between them, as being one variable that describes this entity.
 Let's call its motion the {\em external} motion.
 We can also think of the distance between the two masses in the pair as being the system's {\em internal} motion.
-(I'm just using {\em internal} and {\em external} as convenient names. Don't read too much into them.)
+(I'm just using {\em internal} and {\em external} as convenient names.
+Don't read too much into them.)
 It turns out that when you analyse this using classical dynamics the internal motion and the external motion act like independent quantities.
 What's more, each one behaves exactly like it's simple harmonic.
 So we get one sine wave describing the overall motion of the pair, and another one that describes how the elements of the pair oscillate with respect to each other.
-In a way that's similar to the case with one mass on a spring we can initialise the motion with whatever energy we like.
-Except in this case we can choose any energy we like for the internal motion and any energy we like for the external motion.
-(Up to a point.
-Too much energy and the masses start whacking the walls on the side.
-So we're more interested in the low energy case here.)
 
-Interestingly the frequencies of the internal and external motions are typically different.
+The frequencies of the internal and external motions are typically different.
 So you can end up with some quite complicated motions with two different frequencies beating against each other.
 
 When we're able to find ways to split up the motion into independent quantities, each of which is simple harmonic, each kind of motion is said to be a {\em normal mode}\footnote{See \url{https://en.m.wikipedia.org/wiki/Normal_mode}}.
 
-When you have independent normal modes, the theory behind quantum mechanics says we can treat them independently.
-So what we expect is that the spectrum of possible energy levels for this system is, in some sense, two-dimensional.
-We can put quanta into the internal oscillation and we can put quanta into the external oscillation.
-Note that these quanta are associated with different frequencies of oscillation so they correspond to different amounts of energy.
+When you have independent normal modes, you can treat them independently in quantum mechanics too.
+So what we get is that the spectrum of possible energy levels for this system is, in some sense, two-dimensional.
+We can put quanta into the internal oscillation and we can also put quanta into the external oscillation.
+Because these modes have different frequencies the quanta for each mode correspond to different amounts of energy.
 
 (And a reminder: when talking about quantum mechanics I'm not talking literally about masses on springs. I'm talking about physical systems that have equations of motion that mean they behave like masses on springs. In this case it might be a pair of particles trapped in a microscopic well with a repulsive force between them.)
 
 \section{Solid state physics}
 Now I'm going to jump from just two masses to a large number of them.
-For example, the behavior of trillions of atoms in a crystal can be approximately modelled by a grid of masses and springs, of which the following diagram is just a tiny piece:
+For example, the behavior of trillions of atoms in a solid crystal can be approximately modelled by a grid of masses and springs, of which the following diagram is just a tiny piece:
 
 \begin{center}
 \begin{tikzpicture}
@@ -334,11 +290,12 @@ This is a highly coupled system.
 Ultimately every atom in our lattice is connected to every other one, either directly, or indirectly.
 Nonetheless, it is still possible to find normal modes.
 The normal modes all have the same basic form:
-for each normal mode there is some direction, velocity and frequency, and the normal mode consists of sinusoidal waves of displacement travelling in the given direction with the given speed and oscillation frequency.
-These waves extend through the entire crystal, but with fixed spacing between planar wavefronts.
-These waves are known as plane waves.
+they are all sinusoidal waves of displacement traveling in some direction with some speed and oscillation frequency.
+Each of these modes consists of waves that extend through the entire crystal, with fixed spacing between parallel planar wavefronts.
+This type of waves is known as a plane wave.
 If the system is perfectly harmonic, so the restoring force is precisely proportional to the displacement, then each direction and frequency of wave oscillates its way through the crystal completely independently of any other.
-Just as how in the example with two masses any possible oscillation is a combination of internal and external motion, for a crystal lattice any motion is a combination of these plane waves. (Decomposing any oscillation as a combination of plane waves is known as computing its Fourier transform.\footnote{See \url{https://en.m.wikipedia.org/wiki/Fourier_transform}})
+Just as how in the example with two masses any possible oscillation is a combination of internal and external motion, for a crystal lattice any motion is a combination of these plane waves.
+(Decomposing any oscillation as a combination of plane waves is known as computing its Fourier transform.\footnote{See \url{https://en.m.wikipedia.org/wiki/Fourier_transform}})
 
 Now we're ready to consider this situation quantum mechanically.
 Because each plane wave is a normal mode, we can treat each one as an independent simple harmonic oscillator.
@@ -347,11 +304,11 @@ So when we consider a crystal lattice quantum mechanically we find that its stat
 So again we can talk about how many quanta there are in each mode.
 
 Linguistically it gets a bit more interesting now.
-Each plane wave is associated with a particular direction and speed so it makes sense to talk of these quanta as have a direction and speed.
+Each plane wave is associated with a particular direction and speed so it makes sense to talk of these quanta as having a direction and speed.
 But note that statements involving quanta are still really just sentences about energy levels.
 So, for example, the statement ``the mode of this system with this velocity and frequency is in its first excited state'' is, by definition, exactly the same as ``this system has precisely one quantum with this velocity and frequency''.
 In particular, when we write sentences like these we aren't implying that there is some new kind of object, the quantum, that has suddenly attached itself to our crystal.
-The quanta are, in effect, properties of the lattice.
+The quanta are properties of the lattice.
 By the way, in the particular case of vibrating atoms in a lattice, the quanta are known by a special name: {\em phonons}\footnote{See \url{https://en.m.wikipedia.org/wiki/Phonon}}.
 
 \section{Quantum field theory and photons}
@@ -362,52 +319,29 @@ Maxwell's equations say that a varying magnetic field generates an electric fiel
 The result is that it is possible for an oscillating electric field to create an oscillating electric field so that an electric field can propagate through space on its own without the help of electric charges or electric currents or any other kind of `generator'.
 As these electric fields also produce magnetic fields that propagate with them, the whole thing is called an electromagnetic wave.
 
-Just like in the case of displacements in a crystal lattice, an electromagnetic wave also has normal modes.
-For each choice of direction and frequency, plane waves with those parameters form a normal mode.
-In fact, you have personal experience of this fact.
+Just like displacements in a crystal lattice, an electromagnetic wave also has normal modes.
+The normal modes are plane waves traveling at the speed of light in a particular directions with a given frequency.
+You have personal experience of this.
 Visible light is electromagnetic radiation with a frequency of around 500 THz.
 Wifi uses signals at around 5 GHz.
 The radio might use signals at around 100 MHz.
 When you surf the web wirelessly while listening to the radio, the wifi signals don't interfere with your vision or the radio signal.
 (Actually, wifi might interfere with the radio signals, but not because of the 5 GHz signals. It might happen if badly manufactured hardware emits stray signals around the 100 MHz band.)
 That's because these waves pass through each other without being coupled to each other in any way.
-And at this point you must already be guessing what a {\em photon} is.
+And at this point you might already be guessing what a {\em photon} is.
 For each choice of frequency and direction (and also polarisation, but that's just a detail) the amount of energy that can be in the corresponding mode is quantised.
 For the electromagnetic field the quanta are called photons.\footnote{See \url{https://en.m.wikipedia.org/wiki/Photon}}
 
 And that's it!
+
 Electromagnetic waves can be thought of as being made up of different oscillation modes.
 Because of quantum mechanics, each mode contains an amount of energy that is quantised to be a whole number multiple of some base amount.
-Although the thing that really matters is the total amount of energy in the mode (like how it's your total bank balance that matters) it can still be useful to talk about this total as if it's a collection of objects called photons, even though there isn't really an object corresponding to the noun (and just as there aren't really objects corresponding to the individual dollars in your account).
+Although the thing that really matters is the total amount of energy in the modes, it can still be useful to talk about this total as if it's a collection of objects called photons.
 
-\section{Some consequences}
-The normal modes for an electromagnetic wave are plane waves that are extended in space. In principle all the way across the universe but for practical problems physicists often consider electromagnetic waves in a large but finite box.
+(One thing to notice is that the normal modes for an electromagnetic wave are plane waves that are extended in space.
+In principle all the way across the universe but for practical problems physicists often consider electromagnetic waves in a large but finite box.
 This means that adding a quantum to a system has an effect that extends across the entire system.
 That makes it highly problematic to talk about the location of a photon.
-The notion doesn't really make any sense.
-
-In classical electromagnetism the normal modes of an electromagnetic field carry not only energy but also momentum.
-So it makes sense to talk of the momentum of a photon.
-Again, I must reiterate that we talk of the momentum of the photon but really we're talking about a property of the field.
-
-Note that the last two paragraphs are consistent with the Heisenberg uncertainty principle.
-In this particular case it says that if we know the exact momentum of a photon then we must be completely uncertain about its position.
-That's exactly the situation we have.
-Photons correspond to normal modes with a precisely specified energy, frequency and momentum.
-Additionally they are associated with plane waves that extend across space so we can't specify  their position.
-
-\section{Stuff I left out}
-I just wanted to answer one question.
-To do this I had to leave out a lot of stuff:
-\begin{enumerate}
-\item Fermions.
-\item Virtual photons and Feynman diagrams.
-\item Superpositions.
-\item Quasiparticles.
-\item The way light beams at a low enough intensity look like streams of discrete particles.
-\item Wave/particle duality.
-\item Feynman's description of photons in his book QED.
-\end{enumerate}
-All I can do is apologise.
+The notion doesn't really make any sense.)
 
 \end{document}
