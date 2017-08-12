@@ -16,10 +16,12 @@
 \usepackage[colorinlistoftodos]{todonotes}
 \usepackage{hyperref}
 \usepackage{pgfplots}
-\pgfplotsset{compat=1.14}
+\pgfplotsset{compat=1.9}
 
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathmorphing,patterns}
+\usetikzlibrary{external}
+\tikzexternalize
 
 \title{What is a photon?}
 \author{Dan Piponi}
@@ -70,7 +72,6 @@ Here's what a graph of its displacement looks like over time:
 \begin{center}
 \begin{tikzpicture}
   \begin{axis}[
-    trig format plots=rad,
     axis lines = middle,
     xlabel = time,
     ylabel = position,
@@ -81,7 +82,7 @@ Here's what a graph of its displacement looks like over time:
     xticklabels={,,},
     yticklabels={,,}
     ]
-    \addplot[domain=0:4*pi,samples=200,black,line width=1pt] {sin(x)};
+    \addplot[domain=0:720,samples=200,black,line width=1pt] {sin(x)};
 %    \draw[dotted,blue!40] (axis cs: 0.5*pi,1.1) -- (axis cs: 0.5*pi,0);
 %    \draw[dotted,red!40] (axis cs: 0.5*pi+2,1.1) -- (axis cs: 0.5*pi+2,0);
   \end{axis}
